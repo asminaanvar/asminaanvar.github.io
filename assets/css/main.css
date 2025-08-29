@@ -33,6 +33,7 @@ body {
 	line-height: 1;
 }
 
+
 ol, ul {
 	list-style: none;
 }
@@ -70,6 +71,30 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+/*About me*/
+.about-me {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left !important;
+}
+
+.about-content p {
+  text-align: left !important;
+  margin-bottom: 15px;
 }
 
 /* Basic */
@@ -321,6 +346,10 @@ input, select, textarea {
 	hr {
 		border-bottom-color: #eeeeee;
 	}
+	.project-domain {
+        text-align: left !important;
+        margin-bottom: 15px;
+    }
 
 /* Row */
 
@@ -3840,6 +3869,10 @@ input, select, textarea {
 			width: 100%;
 			padding: 0;
 		}
+		#main > .posts > button {
+			text-align: left !important;
+            margin-bottom: 15px;
+        }
 
 			#main > .posts > * {
 				-moz-flex-shrink: 1;
@@ -3954,7 +3987,7 @@ input, select, textarea {
 		display: -ms-flex;
 		display: flex;
 		background-color: #f5f5f5;
-		color: #909498;
+		color: #565757;
 		cursor: default;
 		position: relative;
 		margin: 0 auto;
@@ -4293,8 +4326,11 @@ input, select, textarea {
 		#footer form label,
 		#footer h3,
 		#footer p {
-			font-size: 0.8rem;
-		}
+	font-size: 0.9rem;
+	color: #302f2f;
+	text-transform: none; /* Ensures normal casing */
+}
+
 
 		@media screen and (max-width: 980px) {
 
@@ -4341,6 +4377,30 @@ input, select, textarea {
 				}
 
 		}
+		/* close button */
+
+		.close-btn {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+.close-btn:hover {
+  color: #d00;
+}
+
 
 		@media screen and (max-width: 736px) {
 
@@ -4382,107 +4442,7 @@ input, select, textarea {
 
 		}
 
-	#copyright {
-		color: #ffffff;
-		position: relative;
-		color: rgba(255, 255, 255, 0.25);
-		cursor: default;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 0.8rem;
-		font-weight: 900;
-		letter-spacing: 0.075em;
-		line-height: 1.5;
-		text-align: center;
-		text-transform: uppercase;
-		margin: 4rem auto 8rem auto;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
-		z-index: 2;
-	}
-
-		#copyright input, #copyright select, #copyright textarea {
-			color: #ffffff;
-		}
-
-		#copyright a {
-			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
-		}
-
-			#copyright a:hover {
-				border-bottom-color: transparent;
-				color: #18bfef !important;
-			}
-
-		#copyright strong, #copyright b {
-			color: #ffffff;
-		}
-
-		#copyright h1, #copyright h2, #copyright h3, #copyright h4, #copyright h5, #copyright h6 {
-			color: #ffffff;
-		}
-
-		#copyright blockquote {
-			border-left-color: #ffffff;
-		}
-
-		#copyright code {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-		}
-
-		#copyright hr {
-			border-bottom-color: #ffffff;
-		}
-
-		#copyright a {
-			color: inherit;
-			border-bottom-color: inherit;
-		}
-
-		#copyright ul {
-			list-style: none;
-			margin: 0;
-			padding-left: 0;
-		}
-
-			#copyright ul li {
-				border-left: solid 2px;
-				display: inline-block;
-				line-height: 1;
-				margin-left: 1rem;
-				padding-left: 1rem;
-			}
-
-				#copyright ul li:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
-
-		@media screen and (max-width: 1280px) {
-
-			#copyright {
-				margin: 4rem auto;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#copyright ul li {
-				border-left: 0;
-				margin: 1rem 0 0 0;
-				padding-left: 0;
-				display: block;
-			}
-
-				#copyright ul li:first-child {
-					margin-top: 0;
-				}
-
-		}
-
+	
 /* Nav Panel */
 
 	#navPanelToggle {
@@ -4687,3 +4647,105 @@ input, select, textarea {
 		}
 
 	}
+
+	/* generic css*/
+
+	.project-detail {
+  background-color: #595858;
+  color: #f1f1f1;
+  padding: 60px 20px; 
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.project-container {
+  display: flex;                /* This enables side-by-side layout */
+  flex-wrap: wrap;             /* Makes it responsive on smaller screens */
+  gap: 30px;                   /* Space between left and right sections */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-text {
+  flex: 1 1 500px;             /* Left side takes up space */
+}
+
+.project-image {
+  flex: 1 1 500px;             /* Right side (image) takes up space */
+  text-align: center;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Pill Button Styles */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pill img {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.linkedin {
+  background-color: #e0ecff;
+  color: #005fa3;
+}
+
+.github {
+  background-color: #dbf3e6;
+  color: #045d47;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e1cbd3;
+  color: #0a0a0a;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project-text h2 {
+  font-size: 2rem;
+  margin: 15px 0 10px;
+}
+
+.project-text .highlight {
+  color: #00cc66;
+}
+
+.project-text p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
